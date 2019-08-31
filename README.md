@@ -13,12 +13,34 @@
 
 `python3 manage.py shell`
 
-Введите в Shell построчно код из файла scrypts.py.
 
-В первую очередь необходимо импортировать модели,далее используйте требуемую функцию
+В первую очередь необходимо импортировать модели и библиотеку random.
+
+`from datacenter.models import Mark,Schoolkid,Chastisement,Commendation,Subject,Lesson,Teacher`
+`import random`
+
+Далее используйте требуемую функцию,вводя в Shell построчно код из файла scripts.py.
+
+### Работа используя import
+
+Положите scripts.py в один каталог с manage.py и подключите используя import.
+
+
+
 
 #### описание функций:
 
 - def fix_marks            - исправляет оценки
+```
+fix_marks('Соболев Арсений')
+```
+
 - def remove_chastisements - удаляет замечания
+```
+remove_chastisements('Соболев Арсений')
+```
 - def add_commendation     - добавляет похвалу
+
+```
+add_commendation('Соболев Арсений',subject,random.choice(commendations))
+```
