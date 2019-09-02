@@ -31,10 +31,11 @@ def remove_chastisements(kidname):
         print('Скрипт нашел несколько учеников')
 
 
-def add_commendation(kidname):
+def add_commendation(kidname,subject):
     """ Добавляем похвалу. """
     try:
-        subject = Subject.objects.get(title='Технология', year_of_study=6)
+        schoolkid = Schoolkid.objects.get(full_name__contains=kidname)
+        subject = Subject.objects.get(title=subject,year_of_study=schoolkid.year_of_study)
         commendations = [
             'Молодец!', 'Отлично!', 'Хорошо!', 'Гораздо лучше, чем я ожидал!',
             'Ты меня приятно удивил!', 'Великолепно!', 'Прекрасно!',
@@ -50,7 +51,7 @@ def add_commendation(kidname):
             'Ты растешь над собой!', 'Ты многое сделал, я это вижу!',
             'Теперь у тебя точно все получится!'
         ]
-        schoolkid = Schoolkid.objects.get(full_name__contains=kidname)
+        
         lesson = Lesson.objects.get(group_letter='А',
                                     subject=subject).order_by('-date')
         teacher = lesson.teacher
