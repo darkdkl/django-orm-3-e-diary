@@ -10,12 +10,10 @@
 ## Работа с Manage Shell
 
 В папке с сайтом выполните :
-
 `python3 manage.py shell`
 
 
-
-В первую очередь необходимо импортировать модели и библиотеку random.
+в Shell, в первую очередь, необходимо импортировать модели и библиотеку random.
 ```
 from datacenter.models import Mark, Schoolkid, Chastisement, Commendation, Subject, Lesson,Teacher 
 import random
