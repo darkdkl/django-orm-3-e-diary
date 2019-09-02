@@ -16,7 +16,7 @@
 
 В первую очередь необходимо импортировать модели и библиотеку random.
 
-`from datacenter.models import Mark,Schoolkid,Chastisement,Commendation,Subject,Lesson,Teacher`
+```from datacenter.models import Mark,Schoolkid,Chastisement,Commendation,Subject,Lesson,Teacher``` 
 `import random`
 
 Далее используйте требуемую функцию,вводя в Shell построчно код из файла scripts.py.
@@ -49,5 +49,6 @@ remove_chastisements('Соболев Арсений')
 - def add_commendation     - добавляет похвалу
 
 ```
-add_commendation('Соболев Арсений',subject,random.choice(commendations))
+add_commendation('Соболев Арсений','Музыка')
+
 ```
