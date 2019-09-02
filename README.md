@@ -14,8 +14,8 @@
 `python3 manage.py shell`
 
 
-В первую очередь необходимо импортировать модели и библиотеку random.
 
+В первую очередь необходимо импортировать модели и библиотеку random.
 ```
 from datacenter.models import Mark, Schoolkid, Chastisement, Commendation, Subject, Lesson,Teacher 
 import random
