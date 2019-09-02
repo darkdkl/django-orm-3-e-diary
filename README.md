@@ -16,8 +16,11 @@
 
 В первую очередь необходимо импортировать модели и библиотеку random.
 
-```from datacenter.models import Mark,Schoolkid,Chastisement,Commendation,Subject,Lesson,Teacher``` 
-`import random`
+```
+from datacenter.models import Mark, Schoolkid, Chastisement, Commendation, Subject, Lesson,Teacher 
+import random
+
+```
 
 Далее используйте требуемую функцию,вводя в Shell построчно код из файла scripts.py.
 
